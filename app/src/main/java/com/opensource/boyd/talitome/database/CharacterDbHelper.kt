@@ -31,17 +31,12 @@ class CharacterDbHelper : SQLiteOpenHelper {
                 "CREATE TABLE " + CharacterEntry.TABLE_NAME + " (" +
                         CharacterEntry.COLUMN_NAME_KEY + " TEXT PRIMARY KEY," +
                         CharacterEntry.COLUMN_NAME_NAME + " TEXT," +
-                        CharacterEntry.COLUMN_NAME_XPAC + " TEXT," +
                         CharacterEntry.COLUMN_NAME_STRENGTH + " INTEGER," +
                         CharacterEntry.COLUMN_NAME_CRAFT + " INTEGER," +
                         CharacterEntry.COLUMN_NAME_LIFE + " INTEGER," +
                         CharacterEntry.COLUMN_NAME_FATE + " INTEGER," +
                         CharacterEntry.COLUMN_NAME_GOLD + " INTEGER," +
                         CharacterEntry.COLUMN_NAME_ALIGNMENT + " TEXT," +
-                        CharacterEntry.COLUMN_NAME_SKILL_1 + " TEXT," +
-                        CharacterEntry.COLUMN_NAME_SKILL_2 + " TEXT," +
-                        CharacterEntry.COLUMN_NAME_SKILL_3 + " TEXT," +
-                        CharacterEntry.COLUMN_NAME_SKILL_4 + " TEXT" +
                         ")"
 
         val SQL_DELETE_CHARACTER_TABLE : String = "DROP TABLE IF EXISTS " +

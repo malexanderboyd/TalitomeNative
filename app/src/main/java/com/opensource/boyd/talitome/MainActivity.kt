@@ -1,32 +1,46 @@
 package com.opensource.boyd.talitome
 
 import android.content.ContentValues
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.LinearLayoutManager
+import android.view.View
+import android.widget.LinearLayout
+import com.opensource.boyd.talitome.Adapters.MainActivityAdapter
 import com.opensource.boyd.talitome.database.CharacterDatabaseContract.CharacterEntry
 import com.opensource.boyd.talitome.database.CharacterDbHelper
+import com.opensource.boyd.talitome.database.data.data_characters
+import com.opensource.boyd.talitome.database.data.data_characters.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainActivityAdapter.heroOnClickListener {
+    override fun onClick(item: character, view: View, position: Int) {
+            selected_hero_text.text = item.Name
+    }
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.title_home)
+                title_text1.setText(R.string.title_home)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                message.setText(R.string.title_dashboard)
+                title_text1.setText(R.string.title_dashboard)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                message.setText(R.string.title_notifications)
+                title_text1.setText(R.string.title_notifications)
                 return@OnNavigationItemSelectedListener true
             }
         }
         false
     }
+
+    private var allCharacters : List<character>? = null
+    private var adapter : MainActivityAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,34 +48,21 @@ class MainActivity : AppCompatActivity() {
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
+        getCharacters(baseContext)
+
+        adapter = MainActivityAdapter(allCharacters, this )
+
+        heroes_recycler.layoutManager = GridLayoutManager(this, 3)
+        heroes_recycler.adapter = adapter
 
 
+        adapter?.notifyDataSetChanged()
+    }
 
+    fun getCharacters(context: Context) {
+        var charCreator = data_characters(context)
+        allCharacters = charCreator.createStandardCharacters()
     }
 
 
-    fun initDb() {
-        var dbHelper = CharacterDbHelper(baseContext)
-
-        var activeDb = dbHelper.writableDatabase
-
-        var currentCharacter: ContentValues = ContentValues()
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_KEY, characterName + "-" + expansion)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_NAME, characterName)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_XPAC, expansion)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_ALIGNMENT, alignment)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_STRENGTH, strength)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_CRAFT, craft)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_LIFE, life)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_FATE, fate)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_GOLD, gold)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_SKILL_1, skill_1)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_SKILL_2, skill_2)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_SKILL_3, skill_3)
-        currentCharacter.put(CharacterEntry.COLUMN_NAME_SKILL_4, skill_4)
-
-        activeDb.insert(CharacterEntry.TABLE_NAME, null, currentCharacter)
-
-
-    }
 }

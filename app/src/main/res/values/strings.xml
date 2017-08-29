@@ -3,4 +3,93 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="title_1">SELECT</string>
+    <string name="title_2">YOUR</string>
+    <string name="title_3">HERO</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- General Terms -->
+    <string name="expansion_std">Standard</string>
+    <string name="alignment_evil">Evil</string>
+    <string name="alignment_neutral">Neutral</string>
+    <string name="alignment_good">Good</string>
+
+
+
+    <!-- Characters -->
+    <string name="char_warrior_name">Warrior</string>
+    <string name="char_warrior_skill_1">You may roll two dice in battle and use the higher attack roll to determine your attack score.</string>
+    <string name="char_warrior_skill_2">You may use two Weapons at the same time.</string>
+    <string name="char_ghoul_name">Ghoul</string>
+    <string name="char_ghoul_skill_1">When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.</string>
+    <string name="char_ghoul_skill_2">Whenever you defeat a character in psychic combat, if you choose to take one of his lives, add it to your own.</string>
+    <string name="char_ghoul_skill_3">When you kill an Enemy in battle, you may raise it from the dead and keep it as a Follower instead of a trophy. You may have one of your raised Followers add its Strength to yours for one battle, after which it disintegrates to the discard pile. You may only use one raised Follower per battle.</string>
+    <string name="char_wizard_name">Wizard</string>
+    <string name="char_wizard_skill_1">You begin the game with two Spells.</string>
+    <string name="char_wizard_skill_2">During the game, you always have at least one Spell. (Gain a Spell each time you cast your last Spell)</string>
+    <string name="char_wizard_skill_3">When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.</string>
+    <string name="char_assassin_name">Assassin</string>
+    <string name="char_assassin_skill_1">You may assassinate when you attack a character or creature. You cannot assassinate when you are attacked by another character. When you assassinate, battle takes place as normal except that your victim may not roll a die to add to his Strength. If you win, you must force the loser to lose 1 life; you cannot take an Object or gold instead.</string>
+    <string name="char_assassin_skill_2">You may not assassinate while at the Crown of Command.</string>
+    <string name="char_druid_name">Druid</string>
+    <string name="char_druid_skill_1">You begin the game with one Spell.</string>
+    <string name="char_druid_skill_2">You may change your alignment at will. At any given time though, you can only be of one alignment. For example, if you are carrying the Runesword and you wish to pray at the Chapel, you must ditch the Runesword.</string>
+    <string name="char_druid_skill_3">Whenever you land on the Woods, you may gain your full complement of Spells, according to your current Craft</string>
+    <string name="char_dwarf_name">Dwarf</string>
+    <string name="char_dwarf_skill_1">You need not roll the die in the Crags or the Chasm unless you wish to. If you choose to roll, you must accept the result.</string>
+    <string name="char_dwarf_skill_2">You may evade creatures and characters in the Hills</string>
+    <string name="char_dwarf_skill_3">You need only roll 2 dice in the Mines.</string>
+    <string name="char_dwarf_skill_4">You need only roll 1 die if you attempt to open the Portal of Power by Craft.</string>
+    <string name="char_dwarf_skill_5">After rolling the die in the Cave, you may add 1 to the score.</string>
+    <string name="char_dwarf_skill_6">You are unaffected by the Maze.</string>
+    <string name="char_elf_name">Elf</string>
+    <string name="char_elf_skill_1">You need not roll the die in the Forest unless you wish to. If you choose to roll, you must accept the result.</string>
+    <string name="char_elf_skill_2">You may evade creatures and characters in the Woods.</string>
+    <string name="char_elf_skill_3">If you are on the Woods, instead of rolling the die for your move, you may move to any other Woods in the same Region.</string>
+    <string name="char_minstrel_name">Minstrel</string>
+    <string name="char_minstrel_skill_1">Animals and Dragons will not attack you, although you may choose to attack them.</string>
+    <string name="char_minstrel_skill_2">If you do not attack an Animal, you may attempt to charm it. To do so, roll 1 die: if you roll higher than the Animal\'s Strength, it joins you as a Follower and adds its Strength to yours in battle. You may only use one charmed Animal per battle.</string>
+    <string name="char_minstrel_skill_3">You may take the Maiden and Princess from a character you land on.</string>
+    <string name="char_monk_name">Monk</string>
+    <string name="char_monk_skill_1">Your inner belief allows you to add your Craft value to your Strength during battle.</string>
+    <string name="char_monk_skill_2">After rolling the die when praying, you may add 1 to the score.</string>
+    <string name="char_monk_skill_3">You may not use any Weapon or Armour during battle.</string>
+    <string name="char_priest_name">Priest</string>
+    <string name="char_priest_skill_1">You begin the game with one Spell.</string>
+    <string name="char_priest_skill_2">After rolling the die when praying, you may add 1 to the score.</string>
+    <string name="char_priest_skill_3">You may choose to automatically destroy any Spirits without resorting to psychic combat. When you destroy a Spirit in this manner, you may not keep the Enemy as a trophy but you may gain one Spell.</string>
+    <string name="char_priest_skill_4">You may not use any Weapon during battle.</string>
+    <string name="char_prophetess_name">Prophetess</string>
+    <string name="char_prophetess_skill_1">You begin the game with one Spell.</string>
+    <string name="char_prophetess_skill_2">During the game, you always have at least one Spell. (Gain a Spell each time you cast your last Spell).</string>
+    <string name="char_prophetess_skill_3">Whenever you have to draw Adventure Cards, you may discard one card of your choice that you do not wish to encounter and draw one more card to replace it, which you must encounter.</string>
+    <string name="char_prophetess_skill_4">At any time during the game, you may look at the Spell Cards held by other characters.</string>
+    <string name="char_sorceress_name">Sorceress</string>
+    <string name="char_sorceress_skill_1">You begin the game with one Spell.</string>
+    <string name="char_sorceress_skill_2">When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.</string>
+    <string name="char_sorceress_skill_3">You may attempt to beguile a character that you land on, allowing you to take one gold or Object of your choice. To do so, roll one die: you must roll a 6 to beguile a good character; 5 or 6 for a neutral character; or a 4, 5, or 6 for an evil character.</string>
+    <string name="char_sorceress_skill_4">You may take any one Follower, except the Maiden, Unicorn, or Princess from a character that you land on.</string>
+    <string name="char_thief_name">Thief</string>
+    <string name="char_thief_skill_1">You may take one gold or Object of your choice from a character that you land on.</string>
+    <string name="char_thief_skill_2">Whenever you visit the Market, Market Day, or Village you may take one card of your choice from the Purchase deck for free.</string>
+    <string name="char_troll_name">Troll</string>
+    <string name="char_troll_skill_1">You need not roll the die in the Crags unless you wish to. If you choose to roll, you must accept the result.</string>
+    <string name="char_troll_skill_2">Whenever you roll a 6 for your move, you may regenerate instead of moving. If you choose to regenerate, heal one life and your turn immediately ends.</string>
+
 </resources>
