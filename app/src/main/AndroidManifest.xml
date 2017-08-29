@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HeroTracker"
+            android:label="@string/hero_tracker_title"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

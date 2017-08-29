@@ -3,6 +3,8 @@ package com.opensource.boyd.talitome.database.data
 import android.content.ContentValues
 import android.content.Context
 import android.content.res.Resources
+import android.os.Parcel
+import android.os.Parcelable
 import com.opensource.boyd.talitome.R
 import com.opensource.boyd.talitome.database.CharacterDatabaseContract.CharacterEntry
 
@@ -24,7 +26,45 @@ class data_characters(var context: Context) {
             var gold: Int? = null,
             var alignment: String? = null,
             var skills: List<String>? = null
-    )
+    ) : Parcelable {
+        constructor(parcel: Parcel) : this(
+                parcel.readString(),
+                parcel.readString(),
+                parcel.readValue(Int::class.java.classLoader) as? Int,
+                parcel.readValue(Int::class.java.classLoader) as? Int,
+                parcel.readValue(Int::class.java.classLoader) as? Int,
+                parcel.readValue(Int::class.java.classLoader) as? Int,
+                parcel.readValue(Int::class.java.classLoader) as? Int,
+                parcel.readString(),
+                parcel.createStringArrayList()) {
+        }
+
+        override fun writeToParcel(parcel: Parcel, flags: Int) {
+            parcel.writeString(Name)
+            parcel.writeString(expansion)
+            parcel.writeValue(strength)
+            parcel.writeValue(craft)
+            parcel.writeValue(life)
+            parcel.writeValue(fate)
+            parcel.writeValue(gold)
+            parcel.writeString(alignment)
+            parcel.writeStringList(skills)
+        }
+
+        override fun describeContents(): Int {
+            return 0
+        }
+
+        companion object CREATOR : Parcelable.Creator<character> {
+            override fun createFromParcel(parcel: Parcel): character {
+                return character(parcel)
+            }
+
+            override fun newArray(size: Int): Array<character?> {
+                return arrayOfNulls(size)
+            }
+        }
+    }
 
     var allCharacters = ArrayList<character>()
 

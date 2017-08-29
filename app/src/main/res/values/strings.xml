@@ -3,6 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="hero_tracker_title">Talitome - Hero Tracker</string>
 
     <string name="title_1">SELECT</string>
     <string name="title_2">YOUR</string>
@@ -29,9 +30,14 @@
     <string name="alignment_evil">Evil</string>
     <string name="alignment_neutral">Neutral</string>
     <string name="alignment_good">Good</string>
-
-
-
+    <string name="alignment_label">Alignment</string>
+    <string name="skills_label">Skills</string>
+    <string name="str_label">Strength</string>
+    <string name="craft_label">Craft</string>
+    <string name="gold_label">Gold</string>
+    <string name="life_label">Life</string>
+    <string name="fate_label">Fate</string>
+    <string name="expansion_label">Expansion</string>
     <!-- Characters -->
     <string name="char_warrior_name">Warrior</string>
     <string name="char_warrior_skill_1">You may roll two dice in battle and use the higher attack roll to determine your attack score.</string>
@@ -91,5 +97,6 @@
     <string name="char_troll_name">Troll</string>
     <string name="char_troll_skill_1">You need not roll the die in the Crags unless you wish to. If you choose to roll, you must accept the result.</string>
     <string name="char_troll_skill_2">Whenever you roll a 6 for your move, you may regenerate instead of moving. If you choose to regenerate, heal one life and your turn immediately ends.</string>
+
 
 </resources>

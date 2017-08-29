@@ -1,24 +1,38 @@
 package com.opensource.boyd.talitome
 
-import android.content.ContentValues
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import android.widget.LinearLayout
 import com.opensource.boyd.talitome.Adapters.MainActivityAdapter
-import com.opensource.boyd.talitome.database.CharacterDatabaseContract.CharacterEntry
-import com.opensource.boyd.talitome.database.CharacterDbHelper
 import com.opensource.boyd.talitome.database.data.data_characters
 import com.opensource.boyd.talitome.database.data.data_characters.*
 import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Intent
+import android.app.ActivityOptions
 
-class MainActivity : AppCompatActivity(), MainActivityAdapter.heroOnClickListener {
+
+
+
+
+class MainActivity : Activity(), MainActivityAdapter.heroOnClickListener {
+
+
     override fun onClick(item: character, view: View, position: Int) {
             selected_hero_text.text = item.Name
+            val intent = Intent(this, HeroTracker::class.java)
+        // create the transition animation - the images in the layouts
+        // of both activities are defined with android:transitionName="robot"
+        val options = ActivityOptions
+                .makeSceneTransitionAnimation(this, view, "hero")
+        // start the new activity
+        intent.putExtra("character", item)
+        startActivity(intent, options.toBundle())
+
+
     }
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->

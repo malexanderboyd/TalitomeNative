@@ -12,7 +12,8 @@
         android:layout_margin="10dp"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground">
+        android:foreground="?android:attr/selectableItemBackground"
+        android:transitionName="hero">
 
     <TextView
         android:id="@+id/char_name"
