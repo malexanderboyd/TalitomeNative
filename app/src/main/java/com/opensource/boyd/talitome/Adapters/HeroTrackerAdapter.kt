@@ -10,50 +10,31 @@ import com.opensource.boyd.talitome.database.data.data_characters.*
 import kotlinx.android.synthetic.main.character_portrait.view.*
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.util.SparseArray
+import kotlinx.android.synthetic.main.character_skills.view.*
 
 
-internal class HeroTrackerAdapter(val characters : List<character>?, clickListener: heroOnClickListener) : RecyclerView.Adapter<HeroTrackerAdapter.ViewHolder>() {
-
-    interface heroOnClickListener {
-        fun onClick(item: character, view: View, position: Int)
-    }
-
-    private var clickListener : heroOnClickListener? = clickListener
+internal class HeroTrackerAdapter(val skills : List<String>?) : RecyclerView.Adapter<HeroTrackerAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroTrackerAdapter.ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.character_portrait, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.character_skills, parent, false)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: HeroTrackerAdapter.ViewHolder, position: Int) {
-        characters?.let {
-            holder.bindItems(characters[position])
+        skills?.let {
+            holder.bindItems(skills[position], position)
         }
-
     }
 
     override fun getItemCount(): Int {
-        return characters?.size ?: 0
+        return skills?.size ?: 0
     }
 
-    internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-
-        override fun onClick(view: View?) {
-            view?.let {
-                var pos = layoutPosition
-                var item = characters?.get(pos)
-                item?.let {
-                    clickListener?.onClick(item, view, pos)
-                }
-            }
-        }
-
-
-        fun bindItems(char: character) {
-            itemView.char_name.text = char.name
-            itemView.card_view.setOnClickListener(this)
+        fun bindItems(skill : String, position: Int) {
+            itemView.skill.text = String.format(itemView.resources.getString(R.string.char_numbered_skill), (position+1), skill)
         }
     }
 }

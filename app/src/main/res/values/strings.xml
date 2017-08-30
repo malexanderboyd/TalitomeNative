@@ -38,6 +38,7 @@
     <string name="life_label">Life</string>
     <string name="fate_label">Fate</string>
     <string name="expansion_label">Expansion</string>
+    <string name="char_numbered_skill">%1$d. %2$s"</string>
     <!-- Characters -->
     <string name="char_warrior_name">Warrior</string>
     <string name="char_warrior_skill_1">You may roll two dice in battle and use the higher attack roll to determine your attack score.</string>
