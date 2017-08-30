@@ -17,7 +17,7 @@ class data_characters(var context: Context) {
     var resources: Resources = context.resources
 
     data class character(
-            var Name: String,
+            var name: String,
             var expansion: String? = null,
             var strength: Int? = null,
             var craft: Int? = null,
@@ -40,7 +40,7 @@ class data_characters(var context: Context) {
         }
 
         override fun writeToParcel(parcel: Parcel, flags: Int) {
-            parcel.writeString(Name)
+            parcel.writeString(name)
             parcel.writeString(expansion)
             parcel.writeValue(strength)
             parcel.writeValue(craft)

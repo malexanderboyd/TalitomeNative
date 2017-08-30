@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.opensource.boyd.talitome.viewmodels.HeroTrackerViewModel" />
+    </data>
+
+
+
+    <android.support.constraint.ConstraintLayout
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
@@ -32,7 +45,7 @@
         android:id="@+id/char_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wizard"
+        android:text="@{viewModel.character.name}"
         android:fontFamily="@font/font_windlass"
         android:textSize="32sp"
         android:layout_gravity="center"
@@ -63,7 +76,7 @@
         android:id="@+id/char_align"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/alignment_evil"
+        android:text="@{viewModel.character.alignment}"
         android:fontFamily="@font/font_windlass"
         android:textSize="22sp"
         android:layout_gravity="center"
@@ -109,6 +122,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="1"
+        android:text="@{String.valueOf(viewModel.character.strength)}"
         android:fontFamily="@font/font_windlass"
         android:textSize="22sp"
         android:layout_gravity="center" />
@@ -119,6 +133,7 @@
             android:layout_height="32dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:src="@drawable/ic_arrow_upward_black_24dp"
+            android:onClick="@{viewModel.onClickStrUpBtn}"
             android:layout_marginStart="4dp"/>
     </LinearLayout>
 
@@ -156,6 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="1"
+            android:text="@{String.valueOf(viewModel.character.craft)}"
             android:fontFamily="@font/font_windlass"
             android:textSize="22sp"
             android:layout_gravity="center" />
@@ -203,6 +219,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="1"
+            android:text="@{String.valueOf(viewModel.character.life)}"
             android:fontFamily="@font/font_windlass"
             android:textSize="22sp"
             android:layout_gravity="center" />
@@ -252,6 +269,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="1"
+            android:text="@{String.valueOf(viewModel.character.fate)}"
             android:fontFamily="@font/font_windlass"
             android:textSize="22sp"
             android:layout_gravity="center" />
@@ -301,6 +319,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="1"
+            android:text="@{String.valueOf(viewModel.character.gold)}"
             android:fontFamily="@font/font_windlass"
             android:textSize="22sp"
             android:layout_gravity="center" />
@@ -351,3 +370,4 @@
     </android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>
+</layout>

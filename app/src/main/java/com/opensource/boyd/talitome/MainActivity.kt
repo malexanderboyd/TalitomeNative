@@ -22,7 +22,7 @@ class MainActivity : Activity(), MainActivityAdapter.heroOnClickListener {
 
 
     override fun onClick(item: character, view: View, position: Int) {
-            selected_hero_text.text = item.Name
+            selected_hero_text.text = item.name
             val intent = Intent(this, HeroTracker::class.java)
         // create the transition animation - the images in the layouts
         // of both activities are defined with android:transitionName="robot"

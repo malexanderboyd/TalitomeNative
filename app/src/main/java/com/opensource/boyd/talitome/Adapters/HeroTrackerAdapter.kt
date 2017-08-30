@@ -12,11 +12,7 @@ import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.util.SparseArray
 
 
-
-/**
- * Created by Boyd on 8/28/2017.
- */
-internal class MainActivityAdapter(val characters : List<character>?, clickListener: heroOnClickListener) : RecyclerView.Adapter<MainActivityAdapter.ViewHolder>() {
+internal class HeroTrackerAdapter(val characters : List<character>?, clickListener: heroOnClickListener) : RecyclerView.Adapter<HeroTrackerAdapter.ViewHolder>() {
 
     interface heroOnClickListener {
         fun onClick(item: character, view: View, position: Int)
@@ -25,19 +21,20 @@ internal class MainActivityAdapter(val characters : List<character>?, clickListe
     private var clickListener : heroOnClickListener? = clickListener
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainActivityAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroTrackerAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.character_portrait, parent, false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: MainActivityAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HeroTrackerAdapter.ViewHolder, position: Int) {
         characters?.let {
             holder.bindItems(characters[position])
         }
+
     }
 
     override fun getItemCount(): Int {
-       return characters?.size ?: 0
+        return characters?.size ?: 0
     }
 
     internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
