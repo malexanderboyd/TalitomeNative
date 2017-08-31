@@ -34,7 +34,7 @@ internal class HeroTrackerAdapter(val skills : List<String>?) : RecyclerView.Ada
     internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindItems(skill : String, position: Int) {
-            itemView.skill.text = String.format(itemView.resources.getString(R.string.char_numbered_skill), (position+1), skill)
+            itemView.skill.text = String.format(itemView.resources.getString(R.string.char_numbered_skill), skill)
         }
     }
 }

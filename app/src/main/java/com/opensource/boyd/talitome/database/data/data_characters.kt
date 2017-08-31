@@ -210,7 +210,117 @@ class data_characters(var context: Context) {
                     resources.getString(R.string.char_troll_skill_2))
     )
 
+    private val ARCANE_SCION = character(resources.getString(R.string.char_arcane_scion_name),
+            resources.getString(R.string.expansion_cataclysm),
+            2, 4, 4, 2, 1,
+            resources.getString(R.string.alignment_neutral),
+            listOf(
+                    resources.getString(R.string.char_arcane_scion_skill_1),
+                    resources.getString(R.string.char_arcane_scion_skill_2),
+                    resources.getString(R.string.char_arcane_scion_skill_3),
+                    resources.getString(R.string.char_arcane_scion_skill_4)
+                    )
+    )
+
+    private val BARBARIAN = character(resources.getString(R.string.char_barbarian_name),
+            resources.getString(R.string.expansion_cataclysm),
+            4, 1, 5, 2, 1,
+            resources.getString(R.string.alignment_neutral),
+            listOf(
+                    resources.getString(R.string.char_barbarian_skill_1),
+                    resources.getString(R.string.char_barbarian_skill_2),
+                    resources.getString(R.string.char_barbarian_skill_3),
+                    resources.getString(R.string.char_barbarian_skill_4))
+    )
+
+    private val BLACK_KNIGHT = character(resources.getString(R.string.char_black_knight_name),
+            resources.getString(R.string.expansion_cataclysm),
+            4, 2, 4, 2, 1,
+            resources.getString(R.string.alignment_evil),
+            listOf(
+                    resources.getString(R.string.char_black_knight_skill_1),
+                    resources.getString(R.string.char_black_knight_skill_2),
+                    resources.getString(R.string.char_black_knight_skill_3))
+    )
+
+    private val MUTANT = character(resources.getString(R.string.char_mutant_name),
+            resources.getString(R.string.expansion_cataclysm),
+            2, 2, 5, 3, 1,
+            resources.getString(R.string.alignment_evil),
+            listOf(
+                    resources.getString(R.string.char_mutant_skill_1),
+                    resources.getString(R.string.char_mutant_skill_2),
+                    resources.getString(R.string.char_mutant_skill_3))
+    )
+
+
+    private val SCAVENGER = character(resources.getString(R.string.char_scavenger_name),
+            resources.getString(R.string.expansion_cataclysm),
+            3, 3, 4, 3, 1,
+            resources.getString(R.string.alignment_neutral),
+            listOf(
+                    resources.getString(R.string.char_scavenger_skill_1),
+                    resources.getString(R.string.char_scavenger_skill_2),
+                    resources.getString(R.string.char_scavenger_skill_3),
+                    resources.getString(R.string.char_scavenger_skill_4),
+                    resources.getString(R.string.char_scavenger_skill_5))
+    )
+
+    private val LEPRECHAUN = character(resources.getString(R.string.char_leprechaun_name),
+            resources.getString(R.string.expansion_frost_march),
+            2, 4, 4, 3, 1,
+            resources.getString(R.string.alignment_neutral),
+            listOf(
+                    resources.getString(R.string.char_leprechaun_skill_1),
+                    resources.getString(R.string.char_leprechaun_skill_2),
+                    resources.getString(R.string.char_leprechaun_skill_3),
+                    resources.getString(R.string.char_leprechaun_skill_4))
+    )
+
+    private val NECROMANCER = character(resources.getString(R.string.char_necromancer_name),
+            resources.getString(R.string.expansion_frost_march),
+            2, 4, 4, 2, 1,
+            resources.getString(R.string.alignment_evil),
+            listOf(
+                    resources.getString(R.string.char_necromancer_skill_1),
+                    resources.getString(R.string.char_necromancer_skill_2),
+                    resources.getString(R.string.char_necromancer_skill_3),
+                    resources.getString(R.string.char_necromancer_skill_4))
+    )
+
+    private val OGRE_CHIEFTAIN = character(resources.getString(R.string.char_ogre_chieftain_name),
+            resources.getString(R.string.expansion_frost_march),
+            5, 2, 6, 1, 1,
+            resources.getString(R.string.alignment_neutral),
+            listOf(
+                    resources.getString(R.string.char_ogre_chieftain_skill_1),
+                    resources.getString(R.string.char_ogre_chieftain_skill_2))
+    )
+
+    private val WARLOCK = character(resources.getString(R.string.char_warlock_name),
+            resources.getString(R.string.expansion_frost_march),
+            2, 5, 4, 1, 1,
+            resources.getString(R.string.alignment_neutral),
+            listOf(
+                    resources.getString(R.string.char_warlock_skill_1),
+                    resources.getString(R.string.char_warlock_skill_2),
+                    resources.getString(R.string.char_warlock_skill_3)
+                    )
+    )
+
+
+
+
     init {
+        allCharacters.add(WARLOCK)
+        allCharacters.add(OGRE_CHIEFTAIN)
+        allCharacters.add(NECROMANCER)
+        allCharacters.add(LEPRECHAUN)
+        allCharacters.add(SCAVENGER)
+        allCharacters.add(MUTANT)
+        allCharacters.add(BLACK_KNIGHT)
+        allCharacters.add(BARBARIAN)
+        allCharacters.add(ARCANE_SCION)
         allCharacters.add(WARRIOR)
         allCharacters.add(GHOUL)
         allCharacters.add(TROLL)
@@ -227,8 +337,10 @@ class data_characters(var context: Context) {
         allCharacters.add(WIZARD)
     }
 
-    fun createStandardCharacters() : List<character> {
-        return allCharacters.filter { it.expansion == resources.getString(R.string.expansion_std) }
+    fun createCharacters() : List<character> {
+        return allCharacters
     }
+
+
 
 }

@@ -15,11 +15,12 @@
         android:foreground="?android:attr/selectableItemBackground"
         android:transitionName="hero">
 
-    <TextView
-        android:id="@+id/char_name"
+    <ImageView
+        android:id="@+id/char_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Test"
+        android:scaleType="centerCrop"
         android:layout_gravity="center"/>
 
     </android.support.v7.widget.CardView>

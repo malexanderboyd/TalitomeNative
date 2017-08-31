@@ -9,6 +9,7 @@ import com.opensource.boyd.talitome.R
 import com.opensource.boyd.talitome.database.data.data_characters.*
 import kotlinx.android.synthetic.main.character_portrait.view.*
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.support.v4.content.ContextCompat
 import android.util.SparseArray
 
 
@@ -55,7 +56,9 @@ internal class MainActivityAdapter(val characters : List<character>?, clickListe
 
 
         fun bindItems(char: character) {
-            itemView.char_name.text = char.name
+            val Name = char.name.toLowerCase()
+            val id = R.drawable::class.java.getField(Name).getInt(null)
+            itemView.char_img.setImageDrawable(ContextCompat.getDrawable(itemView.context, id))
             itemView.card_view.setOnClickListener(this)
         }
     }

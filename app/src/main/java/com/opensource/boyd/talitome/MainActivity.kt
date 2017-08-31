@@ -13,17 +13,15 @@ import com.opensource.boyd.talitome.database.data.data_characters.*
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
 import android.app.ActivityOptions
-
-
-
+import kotlinx.android.synthetic.main.activity_hero_tracker.*
+import java.util.*
 
 
 class MainActivity : Activity(), MainActivityAdapter.heroOnClickListener {
 
 
     override fun onClick(item: character, view: View, position: Int) {
-            selected_hero_text.text = item.name
-            val intent = Intent(this, HeroTracker::class.java)
+        val intent = Intent(this, HeroTracker::class.java)
         // create the transition animation - the images in the layouts
         // of both activities are defined with android:transitionName="robot"
         val options = ActivityOptions
@@ -64,6 +62,8 @@ class MainActivity : Activity(), MainActivityAdapter.heroOnClickListener {
 
         getCharacters(baseContext)
 
+        allCharacters = allCharacters?.sortedWith(compareBy({ it.name }))
+
         adapter = MainActivityAdapter(allCharacters, this )
 
         heroes_recycler.layoutManager = GridLayoutManager(this, 3)
@@ -75,7 +75,7 @@ class MainActivity : Activity(), MainActivityAdapter.heroOnClickListener {
 
     fun getCharacters(context: Context) {
         var charCreator = data_characters(context)
-        allCharacters = charCreator.createStandardCharacters()
+        allCharacters = charCreator.createCharacters()
     }
 
 

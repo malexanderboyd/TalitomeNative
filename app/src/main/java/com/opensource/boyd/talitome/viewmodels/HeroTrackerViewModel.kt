@@ -2,7 +2,11 @@ package com.opensource.boyd.talitome.viewmodels
 
 import android.content.Context
 import android.databinding.BaseObservable
+import android.graphics.drawable.Drawable
+import android.support.v4.content.ContextCompat
 import android.view.View
+import com.bumptech.glide.Glide
+import com.opensource.boyd.talitome.R
 import com.opensource.boyd.talitome.database.data.data_characters
 /**
  * Created by Boyd on 8/29/2017.
@@ -72,6 +76,10 @@ class HeroTrackerViewModel(val context : Context, val character : data_character
         return character.alignment ?: ""
     }
 
+    fun formattedName() : String {
+        return character.name.replace("_", " ")
+    }
+
     fun onModifyCraftBtn(type: Int) : View.OnClickListener = View.OnClickListener { item ->
         item?.let {
             var currentStat : Int = character.craft ?: 0
@@ -114,6 +122,12 @@ class HeroTrackerViewModel(val context : Context, val character : data_character
             }
             setCurrentLife(currentStat.toString())
         }
+    }
+
+    fun getHeroImage() : Drawable {
+        val Name = character.name.toLowerCase()
+        val id = R.drawable::class.java.getField(Name).getInt(null)
+        return ContextCompat.getDrawable(context, id)
     }
 
 }

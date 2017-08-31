@@ -27,6 +27,8 @@
 
     <!-- General Terms -->
     <string name="expansion_std">Standard</string>
+    <string name="expansion_cataclysm">Cataclysm</string>
+    <string name="expansion_frost_march">Frostmarch</string>
     <string name="alignment_evil">Evil</string>
     <string name="alignment_neutral">Neutral</string>
     <string name="alignment_good">Good</string>
@@ -38,7 +40,7 @@
     <string name="life_label">Life</string>
     <string name="fate_label">Fate</string>
     <string name="expansion_label">Expansion</string>
-    <string name="char_numbered_skill">%1$d. %2$s"</string>
+    <string name="char_numbered_skill">&#8226; %1$s"</string>
     <!-- Characters -->
     <string name="char_warrior_name">Warrior</string>
     <string name="char_warrior_skill_1">You may roll two dice in battle and use the higher attack roll to determine your attack score.</string>
@@ -98,6 +100,61 @@
     <string name="char_troll_name">Troll</string>
     <string name="char_troll_skill_1">You need not roll the die in the Crags unless you wish to. If you choose to roll, you must accept the result.</string>
     <string name="char_troll_skill_2">Whenever you roll a 6 for your move, you may regenerate instead of moving. If you choose to regenerate, heal one life and your turn immediately ends.</string>
-
-
+    <string name="char_arcane_scion_name">Arcane_Scion</string>
+    <string name="char_arcane_scion_skill_1">You begin the game with 2 Spells.</string>
+    <string name="char_arcane_scion_skill_2">When you land on a character, you may take a secret look at his Spells. You may then take either 1 Spell or 1 Magic Object of your choice from that character.</string>
+    <string name="char_arcane_scion_skill_3">When any character gains Craft, you may gain 1 Spell, if your Craft allows.</string>
+    <string name="char_arcane_scion_skill_4">After rolling 1 or more dice, you may discard 1 Spell or 1 Magic Object to either add or subtract 1 from the result (to a minimum of 1). You may do this only once per roll.</string>
+    <string name="char_barbarian_name">Barbarian</string>
+    <string name="char_barbarian_skill_1">You begin the game with a Greatsword from the Purchase deck.</string>
+    <string name="char_barbarian_skill_2">You cannot have or gain Spells. Spells cannot affect you (except for the Command Spell).</string>
+    <string name="char_barbarian_skill_3">If you are defeated in psychic combat and just lost a life, you may roll 1 die. If you roll a 4,5, or 6, your magic resistance protected you and you did not lose that life, though you still lost the psychic combat.</string>
+    <string name="char_barbarian_skill_4">When you visit the Crags, you may heal 1 life or replenish 1 fate instead of rolling the die.</string>
+    <string name="char_black_knight_name">Black_Knight</string>
+    <string name="char_black_knight_skill_1">You begin the game with a Spiked Shield from the Purchase deck.</string>
+    <string name="char_black_knight_skill_2">When you land on a space with another character, or another character lands on your space, you may threaten that character. If you do, he must either pay you 1 gold or lose 1 life.</string>
+    <string name="char_black_knight_skill_3">When you visit the Castle, you may heal up to your life value instead of encountering the space normally.</string>
+    <string name="char_mutant_name">Mutant</string>
+    <string name="char_mutant_skill_1">When you begin the game, roll 1 die to determine your starting bonus:
+        \n 1) Gain 1 Strength, 1 Craft, 1 life, and 1 fate.
+        \n 2) Gain 2 Strength and 2 life.
+        \n 3) Gain 2 Craft and 2 fate.
+        \n 4) Gain 2 Craft and 2 Spells.
+        \n 5) Gain 2 Strength and 1 Craft.
+        \n 6) Gain 2 Craft and 1 Strength.</string>
+    <string name="char_mutant_skill_2">At the start of your turn, if you have 2 or more life, you may lose 1 life to mutate. If you do, roll 2 dice:
+        \n 2) Lose 1 Strength and 1 Craft.
+        \n 3) Lose 1 Strength or 1 Craft.
+        \n 4) Lose 1 life.
+        \n 5) Lose 1 fate.
+        \n 6-7) Heal 1 life and replenish 1 fate.
+        \n 8) Gain 2 fate.
+        \n 9) Gain 2 life.
+        \n 10) Gain 1 Strength.
+        \n 11) Gain 1 Craft.
+        \n 12) Gain 1 Strength and 1 Craft.</string>
+    <string name="char_mutant_skill_3">If you would be turned into a slimy little Toad, you may cancel the effect and lose 1 life instead.</string>
+    <string name="char_scavenger_name">Scavenger</string>
+    <string name="char_scavenger_skill_1">When you begin the game, place the top 5 cards of the Remnant deck into the Adventure discard pile.</string>
+    <string name="char_scavenger_skill_2">You may carry any number of Objects.</string>
+    <string name="char_scavenger_skill_3">You may treat all Objects as if they had an encounter number of 1.</string>
+    <string name="char_scavenger_skill_4">At the end of your turn, you may stash 1 of your Objects by placing it on this card. If you lose an attack, the victor cannot take the Object in your stash. Similarly, it cannot be taken by any character\'s special ability or Spell. You may have only 1 Object in your stash at any time.</string>
+    <string name="char_scavenger_skill_5">Whenever you roll a 1 for your move, you may scavenge instead of moving. If you choose to scavenge, take the top Object in the Adventure discard pile and end your turn.</string>
+    <string name="char_leprechaun_name">Leprechaun</string>
+    <string name="char_leprechaun_skill_1">You begin the game with two Spells.</string>
+    <string name="char_leprechaun_skill_2">You need not roll the die in the Forest unless you wish to. If you choose to roll, you must accept the result.</string>
+    <string name="char_leprechaun_skill_3">Whenever you land on the Woods, you may gain 3 gold.</string>
+    <string name="char_leprechaun_skill_4">Whenever you roll a 6 for your move, you may teleport to any other space in the same Region instead of moving normally.</string>
+    <string name="char_necromancer_name">Necromancer</string>
+    <string name="char_necromancer_skill_1">You begin the game with two Spells.</string>
+    <string name="char_necromancer_skill_2">When you attack another character, you may choose to make the attack psychic combat. You may not do this when you are attacked by another character.</string>
+    <string name="char_necromancer_skill_3">Spirits will not attack you, although you may choose to attack them.</string>
+    <string name="char_necromancer_skill_4">If you do not attack a Spirit, you may enthral it if your Craft is higher than the Spirit\'s Craft. The Spirit joins you as a Follower and adds its Craft to yours in psychic combat, after which it departs to the discard pile. You may use any number of enthralled Spirits during a psychic combat.</string>
+    <string name="char_ogre_chieftain_name">Ogre_Chieftain</string>
+    <string name="char_ogre_chieftain_skill_1">Monsters will not attack you, although you may choose to attack them.</string>
+    <string name="char_ogre_chieftain_skill_2">Whenever you defeat a Monster in battle, you may dominate it and keep it as a Follower instead of a trophy. The Monster adds its Strength to yours in battle, after which it departs to the discard pile. You may use any number of dominated Monsters during a battle.</string>
+    <string name="char_warlock_name">Warlock</string>
+    <string name="char_warlock_skill_1">You begin the game with two Spells.</string>
+    <string name="char_warlock_skill_2">At the start of your turn, you may gain your full complement of Spells, according to your current Craft.</string>
+    <string name="char_warlock_skill_3">Whenever you complete a Warlock Quest, you may take one card of your choice from the Purchase deck for free instead of gaining a Talisman as your reward.</string>
 </resources>
